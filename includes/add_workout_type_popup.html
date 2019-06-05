@@ -1,0 +1,19 @@
+<div class="add_workout_type_ctr">
+    <form id="add_workout_type_form" name="add_workout_type_form" method="post" enctype="multipart/form-data" action="javascript:return false;"><!-- This form submits to PopupWindow.js which sends to mainPanelData.php.  Consider cutting out the JS middle step and submit straight to the PHP. This will make it easier to upload the icon file.  Pick this up as part of version 2.1.  I added the file field and have the file name posting to the database but no uploading code has been added. -->
+        <div class="inputs">Workout Name<br>
+            <input id="w_workout_name" name="w_workout_name" type="text">
+        </div>
+        <div class="inputs">Icon<br>
+            <input type="file" name="w_icon_file" id="w_icon_file">
+        </div>
+        <div class="inputs">Color<br>
+            //add color picker here
+        </div>
+		<br><br><br><br>
+        <div style="clear:both"></div>
+        <div id="submit_btn">
+            <div class="pop_btn_right submit_btn" id="add_workout_form_submit"></div>
+            <div class="pop_btn_right close_btn" id="add_workout_close_btn"></div>
+        </div> 
+    </form>
+</div>

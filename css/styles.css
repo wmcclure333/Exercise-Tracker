@@ -1,0 +1,736 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*********************************************************GLOBAL CSS ****************************/
+/* override old browsers putting unknown HTML5 elements in INLINE display */
+article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section {  display:block; margin:0px; padding:0px;}
+body{
+	font-family:"ronnia-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	color:#666;
+	/*text-align:center;*/
+	margin:0px;
+	width:100%;
+	height:100%;
+	/*background:#f5d900 url(../images/mainBG.png) 0px 0px repeat;*/
+}
+#ctr{
+	width:100%;
+	height:100%;
+	/*text-align:center;*/
+}
+.clear_float{
+	clear:both;	
+}
+
+.hide{
+	display:none;	
+}
+.pop_btn_right{
+	position:absolute;
+	right:-20px;
+	cursor:pointer;
+}
+.pop_btn_left{
+	position:absolute;
+	left:-20px;
+	cursor:pointer;
+}
+.continue_btn{
+	bottom:-20px;
+	width:193px;
+	height:60px;
+	background:url(../images/continue_btn.png) 0 0 no-repeat;
+}
+.submit_btn1, .submit_btn{
+	bottom:-20px;
+	width:148px;
+	height:58px;
+	background:url(../images/submit_btn.png) 0 0 no-repeat;
+}
+.add_btn{
+	bottom:-20px;
+	width:148px;
+	height:58px;
+}
+.close_btn, .close_btn1, .close_btn2{
+	top:-20px;
+	width:57px;
+	height:56px;
+	background:url(../images/close_btn.png) 0 0 no-repeat;
+	overflow:hidden;
+}
+#logo_ctr{
+	width:185px;
+	height:50px;
+	position:absolute;
+	top:0px; right:0px;	
+}
+/*********************************************************ALERTS ****************************/
+#ALERTS{
+	position:absolute;
+	z-index:309;
+}
+
+.alert_box{
+	position:absolute;
+	top:100px;
+	left:20px;
+	width:100px;
+	height:100px;
+	background-color:#0F0;
+	padding:20px;
+	color:#333;	
+}
+
+
+/***********************************************************PERSISTENT STATUS BAR *******************************************/
+#status_bar{
+	position:absolute;
+	width:100%;
+	height:150px;
+	background-color:#111;
+	color:white;
+	/*border-bottom: .5em solid white;*/
+	bottom:-100px;
+	font-family:"ronnia-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	z-index:305;
+}
+#status_bar_left_column{
+	float:left;
+	height:100%;
+	width:30%;	
+}
+#status_bar_middle_column{
+	float:left;
+	height:100%;
+	width:40%;
+	position:relative;	
+}
+#level_badge{
+	text-align:center;
+	color:#333;
+	font-size:18px;
+	padding-top:10px;
+	position:absolute;
+	top:-40px;
+	background:url(../images/level_badge_bg.png) 0 0 no-repeat;
+	width:233px;
+	height:46px;
+	z-index:2;	
+}
+#status_most_recent{
+	text-align:center;
+	color:white;
+	font-size:14px;
+	margin-top:8px;
+}
+#status_bar_middle_column_left_section{
+	float:left;
+	margin-top:10px;
+	width:40%;
+	height:90px;
+	text-align:center;
+}
+#status_bar_middle_column_right_section{
+	float:right;
+	margin-top:10px;
+	width:60%;
+	height:90px;
+	text-align:center;
+}
+.middle_column_subheader{
+	text-transform:uppercase;
+	color:white;
+	font-size:24px;
+	font-weight:700;
+}
+#hr_avg_copy{
+	font-size:30px;
+	color:white;
+	font-weight:400;
+	margin-top:-10px;
+}
+#weekly_stats_copy{
+	font-size:14px;
+	color:white;
+	font-weight:400;
+	margin-top:-3px;
+}
+#weekly_stats_day_copy{
+	font-size:18px;
+	position:relative;
+	top:-4px;
+	color:#0CF;
+}
+#status_bar_right_column{
+	float:right;
+	height:100%;
+	width:30%;	
+	text-align:center;
+}
+#status_bar_right_column_title{
+	font-size:30px;
+	color:white;
+	font-weight:400;
+	margin-top:10px;
+}
+#progress_btns_ctr{
+	width:186px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+#progress_numbers_btn{
+	display:inline-block;
+	width:88px;
+	height:68px;	
+	cursor:pointer;
+}
+#progress_charts_btn{
+	display:inline-block;
+	width:88px;
+	height:68px;	
+	cursor:pointer;
+}
+#status_bar_top{
+	position:absolute;
+	z-index:2;
+	top:-19px;	
+}
+#score_meter{
+	float:left;
+	padding-left:0px;
+	position:relative;
+	top:30px;
+}
+#score_title{
+	font-weight:400;
+	color:#fff;
+	font-size:20px;
+	position:relative;
+	top:6px;
+	left:40px;
+}
+#score_meter_overlay{
+	position:absolute;
+	top:16px;
+	left:-40px;
+	z-index:3;	
+}
+#score_meter_bar{
+	width:0px; /* 195px is 100% filled */
+	height:14px;
+	display:block;
+	background-color:#00aeef;	
+	position:absolute;
+	top:35px;
+	left:40px;	
+	z-index:4;
+}
+#score_txt{
+	position:absolute;
+	background:url(../images/score_bubble.png) 0 0 no-repeat;
+	top:12px;
+	left:242px;
+	color:#333;	
+	font-size:32px;
+	font-weight:400;
+	padding-top:12px;
+	padding-left:10px;
+	width:80px;
+	height:59px;
+	line-height:.8em;
+	z-index:6;
+}
+#score_txt_pts{
+	font-weight:300;
+	font-size:9px;
+	margin-top:-8px;
+}
+#app_title{
+	position:absolute;
+	margin:0;
+	padding:0;
+	bottom:-7px;
+	left:35%;	
+}
+#level_txt{
+	display:inline-block;
+	position:relative;
+	right:-85px;	
+	top:-20px;
+	font-size:.8em;
+}
+#level_badge{
+	float:right;
+	padding-right:20px;
+}
+/**********************************************************MAIN BODY********************************************/
+#main_workout_panels{
+	position:relative;
+	top:100px; left:0px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0px;
+}
+
+.panel_row{
+	padding:0px;
+	margin:0px;
+}
+
+.main_panel{
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+	position:relative;
+}
+.main_panel .panel_title{
+	font-family:"ronnia-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:400;
+	font-style:italic;
+	color:#fff;
+	position:absolute;
+	z-index:1;
+	font-size:30px;
+	top:20px;
+	left:10px;
+	line-height:20px;
+}
+.main_panel .panel_overlay_btn{
+	position:absolute;
+	z-index:4;
+	width:100%;
+	height:100%;
+}
+.main_panel .panel_highlight_line{
+	position:absolute;
+	z-index:2;
+	bottom:0px;
+	width:100%;
+	height:16px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
+    opacity: 0.3;
+	background-color:white;
+}
+.main_panel .panel_overlay_fader{
+	position:absolute;
+	z-index:3;
+	width:100%;
+	height:100%;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity:0;
+    opacity: 0;
+	background-color:white;
+}
+#alerts_btn{
+	position:absolute;
+	bottom:	150px;
+	right:0px;
+}
+#exercise_type_add_btn{
+	background:url(../images/exercise_type_add_btn.png) 0 0 no-repeat;
+	bottom:-70px;
+}
+
+/*****************************************************FORM POPUP*****************************************/
+.popup{
+	visibility:hidden;
+	position:absolute;
+	background:url(../images/popupBG.png) 0 0 no-repeat;
+	z-index:308;
+	top:0px;
+	left:0px;
+	padding:20px;
+	padding-left:40px;
+	width:250px;
+	height:300px;
+}
+.list_popup{
+	visibility:hidden;
+	position:absolute;
+	z-index:308;
+	background-color:white;
+	top:0px;
+	left:0px;
+	padding:20px;
+	padding-left:40px;
+	width:600px;
+	height:80%;
+}
+#workout_entry_popup{
+}
+#full_screen_underlayer{
+	visibility:hidden;
+	position:absolute;
+	background-color:#3C0;
+	z-index:306;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+}
+
+#workout_type_text{
+	font-size:30px;	
+	font-style:italic;
+	color:#595959;
+	padding-bottom:5px;
+	margin-top:30px;
+}
+.field_label{
+	font-weight:300;
+	font-size:16px;	
+	color:#696969;
+	margin:0px;
+	margin-top:15px;
+	padding:0px;
+	padding-bottom:0px;
+}
+#field_suffix{
+	font-weight:100;
+	font-size:11px;	
+	color:#696969;
+}
+.field{
+	margin:0px;
+	padding:0px;
+	margin-top:3px;
+}
+/*****************************************************EDIT SET FORM POPUP*****************************************/
+.edit_set_ctr{
+	position:absolute;
+	top:100px;
+	left:350px;
+	z-index:309;	
+	width:300px;
+	height:200px;
+	border:2px solid #777;
+	background-color:white;
+}
+
+/********************************************************TWO COLUMN GRID***************************************/
+#two_column_grid{
+	visibility:hidden;
+	position:absolute;
+	background-color:#fff;
+	z-index:307;
+	width:90%;
+	height:90%;
+	top:0px;
+	left:0px;
+}
+#two_column_grid #left_column{
+	float:left;
+	background-color:#eee;
+	width:47%;	
+	height:90%;
+	margin-left:3%;
+	margin-top:2.5%;
+}
+#two_column_grid #right_column{
+	float:left;
+	background-color:#eee;
+	width:47%;	
+	height:90%;
+	margin-top:2.5%;
+}
+#two_column_grid ul, #two_split_grid ul{
+	margin:0px;
+	padding:0px;
+}
+#two_column_grid li, #two_split_grid li{
+	position:relative;
+	background-color:#ddd;
+	list-style-type:none;
+	height:60px;
+	width:100%;	
+	text-align:left;
+}
+#two_column_grid li div.label, #two_split_grid li div.label{
+	position:relative;
+	width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	height:75%;
+	top:12%;
+	font-size:1.2em;
+}
+#two_column_grid li div.label div.sublabel, #two_split_grid li div.label div.sublabel{
+	font-size:.8em;
+	font-style:italic;
+}
+#two_column_grid li div.add_btn{
+	width:30px;
+	height:30px;
+	background:url(../images/plus_minus_btn.png) 0 0 no-repeat;
+	position:absolute;
+	overflow:hidden;
+	top:15px;
+	right:15px;
+	z-index:311;
+}
+#two_column_grid li div.delete_btn{
+	width:30px;
+	height:30px;
+	background:url(../images/plus_minus_btn.png) 0px -30px no-repeat;
+	overflow:hidden;
+	position:absolute;
+	top:15px;
+	right:15px;
+}
+
+#set_type_add_btn{
+	background:url(../images/set_type_add_btn.png) 0 0 no-repeat;
+}
+.add_set_type_ctr{
+	position:absolute;
+	top:100px;
+	left:350px;
+	z-index:312;	
+	width:300px;
+	height:200px;
+	border:2px solid #777;
+	background-color:white;
+}
+#body_group_add_btn{
+	background:url(../images/body_group_add_btn.png) 0 0 no-repeat;
+}
+
+/***************************************************TWO SPLIT GRID******************************************/
+#two_split_grid{
+	visibility:hidden;
+	position:absolute;
+	background-color:#fff;
+	z-index:307;
+	width:90%;
+	height:90%;
+	top:0px;
+	left:0px;
+}
+#two_split_grid #left_box{
+	float:left;
+	background-color:#eee;
+	width:30%;	
+	height:90%;
+	margin-left:3%;
+	margin-top:2.5%;
+	/*overflow:hidden;*/
+}
+#two_split_grid #right_box{
+	float:right;
+	background-color:#eee;
+	width:57%;	
+	height:90%;
+	margin-top:2.5%;
+	margin-right:6%;
+}
+#two_split_grid #right_box #weight_set_log_form_ctr{
+	padding-left:40px;
+	height:100%;
+
+}
+#two_split_grid #right_box .vert_spacer{
+	height:5%;
+}
+#two_split_grid #right_box #rep_num_label{
+	font-size:36px;
+	text-align:left;
+}
+#two_split_grid #right_box #weight_rep_log_form{
+	text-align:left;
+}
+#two_split_grid #right_box #weight{
+	position:relative;
+	display:inline-block;
+}
+#two_split_grid #right_box #reps{
+	position:relative;
+	display:inline-block;
+}
+#two_split_grid #right_box .inputs{
+	position:relative;
+	width:45%;
+	height:40%;
+	padding-left:20px;
+	/*border:1px solid #aaa;*/
+	text-align:left;
+}
+#two_split_grid #right_box input, #two_split_grid #right_box select{
+	display:block;
+	position:relative;
+	/*margin-left:auto;
+	margin-right:auto;*/
+	font-size:30px;
+}
+#two_split_grid #right_box #rep_submit_btn{
+	display:inline-block;
+	float:left;
+	text-align:left;
+	position:relative;
+	top:10px;
+}
+#two_split_grid #right_box #rep_skip_btn{
+	display:inline-block;
+	width:100px;
+	height:40px;
+	position:relative;
+	top:-15px;
+	left:20px;
+	background-color:red;
+	color:white;
+	text-align:center;
+	font-size:12px;
+	font-weight:bold;
+	cursor:pointer;
+}
+#two_split_grid #right_box #rep_clear_float{
+	clear:both;
+}
+#rep_submit_btn input{
+	display:inline-block!important;
+}
+#two_split_grid #submit_weight_workout_btn{
+	width:350px;
+	background:url(../images/submit_weights_btn.png) 0 0 no-repeat;
+}
+#two_split_grid #left_box ul li{
+	height:72px;
+	position:relative;	
+	border-bottom:2px solid gray;
+	background:#ddd url(../images/li_bg.gif) right top no-repeat;
+}
+#two_split_grid #left_box ul li .set_btn_overlay{
+	display:block;
+	position:absolute;
+	z-index:310;
+}
+#two_split_grid li div.checkbox{
+	width:50px;
+	height:50px;
+	position:absolute;
+	z-index:308;
+	top:0px;
+	right:0px;
+	background:url(../images/icon_check_off.png) 0px 0px no-repeat;
+}
+#two_split_grid li div.checked{
+	background:url(../images/icon_check_off.png) 0px -50px no-repeat!important;
+}
+#two_split_grid li div.icon_tray{
+	width:140px;
+	height:28px;
+	position:absolute;
+	top:40px;
+	right:60px;
+	z-index:309;
+}
+#two_split_grid li div.icon_tray .it_set_data{
+	height:20px;
+	width:44px;
+	display:inline-block;
+	color:#ec008c;
+	font-size:11px;
+	font-weight:bold;
+	position:relative;
+	top:-7px;
+	text-align:right;
+}
+
+#two_split_grid li div.icon_tray .it_goal_stars{
+	width:60px;
+	height:28px;
+	display:inline-block;
+}
+#two_split_grid li div.icon_tray .stars0{
+	background:url(../images/icon_tray_goal_stars.png) 0px 0px no-repeat!important;
+}
+#two_split_grid li div.icon_tray .stars1{
+	background:url(../images/icon_tray_goal_stars.png) 0px -28px no-repeat!important;
+}
+#two_split_grid li div.icon_tray .stars2{
+	background:url(../images/icon_tray_goal_stars.png) 0px -56px no-repeat!important;
+}
+#two_split_grid li div.icon_tray .stars3{
+	background:url(../images/icon_tray_goal_stars.png) 0px -84px no-repeat!important;
+}
+#two_split_grid li.active_set{
+	background-color:#B3D9FF;
+}
+/***************************************************INCLUDES - SET LOG FORM******************************************/
+input#fweight, input#freps{
+	background:none;
+	width:70px;
+	border:0;
+	text-align:center;
+	display:inline-block!important;
+}
+div.incremental_button{
+	width:30px;
+	height:30px;
+	display:inline-block;
+	cursor:pointer;
+}
+div.incremental_button_down{
+	background:url(../images/plus_minus_btn.png) 0px -30px no-repeat;
+}
+div.incremental_button_up{
+	background:url(../images/plus_minus_btn.png) 0px 0px no-repeat;
+}
+div.set_note{
+	font-size:11px;	
+}
+div.set_note textarea{
+	width:90%;
+}
+/***************************************************HISTORICAL DATA POPUP******************************************/
+#workout_history_title{
+	font-size:24px;
+	padding-bottom:10px;
+	padding-top:10px;
+	font-style:italic;
+}
+#workout_history_ctr{
+	width:100%;
+	height:90%;	
+}
+.history_entry_gray{
+	background-color:#eee;	
+}
+.history_entry{
+	font-size:18px;	
+	position:relative;
+	height:30px;
+}
+.history_entry_header{
+	font-weight:bold;
+}
+.history_entry_field{
+	position:absolute;
+}
+.history_entry_field_date{
+	left:0px;
+}
+.history_entry_field_type{
+	left:80px;
+}
+.history_entry_field_score{
+	left:220px;
+}
+.history_entry_field_cals{
+	left:270px;
+}
+.history_entry_field_mins{
+	left:340px;
+}
+.history_entry_field_ahr{
+	left:390px;
+}
+.history_entry_field_bonus{
+	left:440px;
+}

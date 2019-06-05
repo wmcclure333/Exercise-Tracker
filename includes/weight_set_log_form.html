@@ -1,0 +1,25 @@
+<!-- Record actual weight/rep data for a set in a weight training workout -->
+<div id="weight_set_log_form_ctr">
+<div class="vert_spacer"></div>
+<div id="rep_num_label"><span id="this_set_name"></span> - Set #<span id='this_set_num'>1</span></div>
+<form id="weight_rep_log_form" name="weight_rep_log_form" method="post" action="javascript:return false;" onsubmit="javascript:_relayRecordWeightTrainingSet();">
+	<div id="weight" class="inputs">Weight<br>
+    	<div class="incremental_button incremental_button_down"></div><!-- buttons hooked up in AppInterface.js -->
+        <input name="weight" type="text" disabled id="fweight" value="" size="5">
+        <div class="incremental_button incremental_button_up"></div>
+	</div>
+    <div id="reps" class="inputs">Reps<br>
+    	<div class="incremental_button incremental_button_down"></div><!-- buttons hooked up in AppInterface.js -->
+        <input name="reps" type="text" disabled id="freps" value="" size="5">
+        <div class="incremental_button incremental_button_up"></div>
+	</div>
+    <div id="rep_submit_btn"><input name="submit" type="submit"><span id="rep_skip_btn">skip</span></div>
+    <div id="rep_clear_float"></div><br>
+
+<br><br>
+
+<div id="set_note"><textarea id="note"></textarea></div>
+	<div class="last_set_data_ctr" style="clear:both">Last time you had a <span class="last_set_data"></span></div>
+	<div class="best_set_data_ctr">Your best set was: <span class="best_set_data"></span></div>
+</form>
+</div>
